@@ -39,3 +39,18 @@ document.getElementById('generate-link').addEventListener('click', function () {
   directLink.href = whatsappUrl;
   directLink.textContent = 'Open in WhatsApp';
 });
+
+// Copy to clipboard functionality
+document.getElementById('copy-btn').addEventListener('click', function () {
+  const plainText = document.getElementById('plain-text');
+  if (plainText.textContent) {
+    navigator.clipboard.writeText(plainText.textContent).then(() => {
+      alert('Copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+      alert('Failed to copy text. Please try again.');
+    });
+  } else {
+    alert('No text to copy. Please generate a link first.');
+  }
+});
