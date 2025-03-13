@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp URL Encoder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .output {
+      margin-top: 20px;
+    }
+    .output a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WhatsApp URL Encoder</h1>
+    <div class="input-group">
+      <label for="whatsapp-number">WhatsApp Number (e.g., +6285773009666):</label>
+      <input type="text" id="whatsapp-number" placeholder="+6285773009666">
+      <span class="error" id="number-error"></span>
+    </div>
+    <div class="input-group">
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+      <span class="error" id="message-error"></span>
+    </div>
+    <button id="generate-link">Generate Link</button>
+    <div class="output" id="output">
+      <h3>Result:</h3>
+      <p><strong>Plain Text:</strong> <span id="plain-text"></span></p>
+      <p><strong>Direct Link:</strong> <a id="direct-link" href="#" target="_blank">Click here</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
